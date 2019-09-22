@@ -60,9 +60,16 @@ public class CameraController : MonoBehaviour
         LastChange = puntos;
 
         // cambia la iluminación del terreno
-        if (Luz.GetComponent<Light>().intensity<0.8f)
+        // y alterna la luz de la pelota
+        if (Luz.GetComponent<Light>().intensity < 0.8f)
+        {
             Luz.GetComponent<Light>().intensity = 0.8f;
+            Pelota.GetComponent<Light>().intensity = 0f;
+        }
         else
+        {
             Luz.GetComponent<Light>().intensity = 0f;
+            Pelota.GetComponent<Light>().intensity = 0.5f;
+        }
     }
 }
