@@ -10,22 +10,25 @@ using UnityEngine.SceneManagement;
 public class PelotaController : MonoBehaviour
 {
 
-    // aquí pondremos el terreno que forma el suelo
+    /// <summary>
+    /// El suelo dónde rueda la pelota. El campo de juego.
+    /// </summary>
     public GameObject Suelo;
 
-    // La velocidad a la que se mueve la pelota.
-    // Se deja como variable para que se pueda setear desde unity
+    /// <summary>
+    /// La velocidad a la que se mueve la pelota. Controlable desde Unity.
+    /// </summary>
     public float Velocidad;
 
-    // el texto de la ui que contiene la puntuación
+    /// <summary>
+    /// El control de text que contendrá la puntuación.
+    /// </summary>
     public Text TextPuntos;
 
-    // el contador de puntos (gemas recogidas)
-    // lo permitimos seatear con unity para probar
+    /// <summary>
+    /// El contador de puntos.
+    /// </summary>
     public int Puntos;
-
-    // cuando empezó (público pa que lo vea el otro)
-    // public DateTime Comienza { get; set; }
 
     // vamos a necesitar el rigidbody de la bola
     private Rigidbody Cuerpo { get; set; }
