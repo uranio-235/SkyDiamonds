@@ -1317,6 +1317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4199dc67baf68c3499053b3ef86f3ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Luz: {fileID: 1692233923}
   Pelota: {fileID: 907448449}
 --- !u!1001 &924319104
 PrefabInstance:

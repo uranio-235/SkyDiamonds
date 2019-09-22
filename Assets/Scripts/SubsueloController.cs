@@ -23,9 +23,6 @@ public class SubsueloController : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-
-        TirarEstorbo(); // probando
-
         // si calló alguna gema, vuélvela a tirar pa arriba
         if (col.gameObject.CompareTag("pickup"))
             Gem.LanzarGema(col.gameObject);
@@ -102,6 +99,8 @@ public class SubsueloController : MonoBehaviour
         Pelota.GetComponent<AudioSource>().Stop();
 
         // cuantos puntos hizo
+        // toma los puntos de la pelota desde otro objeto, GENIAL!
+        // es que simplemente el componente script tiene eso como public
         int puntos = Pelota.GetComponent<PelotaController>().Puntos;
 
         // desactiva la pelota
